@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockRateToday.Client", "StockRateToday.Client\StockRateToday.Client.csproj", "{D432E39C-F400-42AF-A978-1BDC45D2789C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockRateToday.Client", "StockRateToday.Client\StockRateToday.Client.csproj", "{D432E39C-F400-42AF-A978-1BDC45D2789C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC3C6BD5-8C50-4D38-A593-637FA08E4B65}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\azure-static-web-apps-kind-stone-093a8060f.yml = .github\workflows\azure-static-web-apps-kind-stone-093a8060f.yml
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
