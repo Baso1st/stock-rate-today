@@ -7,8 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StockRateToday.Client", "St
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EC3C6BD5-8C50-4D38-A593-637FA08E4B65}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\azure-static-web-apps-kind-stone-093a8060f.yml = .github\workflows\azure-static-web-apps-kind-stone-093a8060f.yml
+		azure-cli-deploy.ps1 = azure-cli-deploy.ps1
+		azuredeploy.json = azuredeploy.json
 		README.md = README.md
+		.github\workflows\client-github-release-pipeline.yml = .github\workflows\client-github-release-pipeline.yml
 	EndProjectSection
 EndProject
 Global
