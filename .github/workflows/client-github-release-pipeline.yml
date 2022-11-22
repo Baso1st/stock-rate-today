@@ -10,6 +10,24 @@ on:
       - master
 
 jobs:
+  create_azure_infrastructure:
+    runs-on: windows-latest
+    
+    steps:
+    # Checkout code from repo
+    - name: checkout repo
+      uses: actions/checkout@v1
+
+    # Run powershell script to create VM
+    - name: RunPowershellScriptFromRepo
+      env: #Set secrets as environment variables
+        SP_CLIENT_ID: ${{ secrets.SPN_CLIENT_ID }}
+        SP_CLIENT_SECRET: ${{ secrets.SPN_CLIENT_SECRET }}
+        SP_TENANT_ID: ${{ secrets.SPN_TENANT_ID }}
+        AZURE_SUBSCRIPTION_NAME: ${{ secrets.AZURE_SUBSCRIPTION_NAME }}
+      run: .\azure-cli-deploy.ps1
+      shell: pwsh
+
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
